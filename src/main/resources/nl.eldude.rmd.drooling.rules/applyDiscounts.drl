@@ -1,0 +1,16 @@
+package nl.eldude.rmd.drooling.rules;
+dialect  "mvel";
+
+import nl.eldude.rnd.drooling.model.Item;
+import nl.eldude.rnd.drooling.model.LineItem;
+import nl.eldude.rnd.drooling.data.CustomerType
+import nl.eldude.rnd.drooling.model.Order;
+
+rule "applyDiscounts"
+    when
+        customerType: CustomerType(customerType==CustomerType.CLUB);
+    then
+        for (Order: order;
+
+
+end;
