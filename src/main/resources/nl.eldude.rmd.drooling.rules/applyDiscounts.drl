@@ -4,13 +4,17 @@ dialect  "mvel";
 import nl.eldude.rnd.drooling.model.Item;
 import nl.eldude.rnd.drooling.model.LineItem;
 import nl.eldude.rnd.drooling.data.CustomerType
-import nl.eldude.rnd.drooling.model.Order;
+import nl.eldude.rnd.drooling.model.Order
+import java.util.List
 
-rule "applyDiscounts"
+rule "Club discount 10%"
     when
         customerType: CustomerType(customerType==CustomerType.CLUB);
+        order: Order(lineItems)
+        lineItem: LineItem(order.getLineItems())
     then
-        for (Order: order;
-
-
+        modify(lineItem)
+        {
+            setDiscount(10)
+        }
 end;
