@@ -1,16 +1,18 @@
 package nl.eldude.rmd.drooling.rules;
-dialect  "mvel";
 
+import nl.eldude.rnd.drooling.data.CustomerType;
 import nl.eldude.rnd.drooling.model.Item;
 import nl.eldude.rnd.drooling.model.LineItem;
-import nl.eldude.rnd.drooling.data.CustomerType
+import nl.eldude.rnd.drooling.model.Customer;
 import nl.eldude.rnd.drooling.model.Order
 import java.util.List
 
+global nl.eldude.rnd.drooling.model.Order order;
+dialect  "mvel";
+
 rule "Club discount 10%"
     when
-        customerType: CustomerType(customerType==CustomerType.CLUB);
-        order: Order(lineItems)
+        Customer(customerType == CustomerType.CLUB);
         lineItem: LineItem(order.getLineItems())
     then
         modify(lineItem)

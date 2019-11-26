@@ -1,12 +1,14 @@
 package nl.eldude.rnd.drooling.model;
 
+import org.apache.commons.collections4.list.TreeList;
+
 import java.util.List;
 
 public class Order {
 
     private Customer customer;
     private String orderNumber;
-    private List<LineItem> lineItems;
+    private List<LineItem> lineItems = new TreeList<>();
     private float total;
 
     public Customer getCustomer() {
@@ -29,8 +31,9 @@ public class Order {
         return lineItems;
     }
 
-    public void setLineItems(List<LineItem> lineItems) {
-        this.lineItems = lineItems;
+    public void addLineItem(final LineItem lineItem)
+    {
+        lineItems.add(lineItem);
     }
 
     public float getTotal() {
