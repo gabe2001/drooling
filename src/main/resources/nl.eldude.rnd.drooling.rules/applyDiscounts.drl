@@ -1,9 +1,5 @@
-<<<<<<< HEAD:src/main/resources/nl.eldude.rnd.drooling.rules/applyDiscounts.drl
 package nl.eldude.rnd.drooling.rules;
 dialect  "mvel";
-=======
-package nl.eldude.rmd.drooling.rules;
->>>>>>> 5953ecb73dc4c21441bb8deb8d4f04ab92b241d2:src/main/resources/nl.eldude.rmd.drooling.rules/applyDiscounts.drl
 
 import nl.eldude.rnd.drooling.data.CustomerType;
 import nl.eldude.rnd.drooling.model.Item;
