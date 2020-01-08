@@ -1,4 +1,4 @@
-package nl.eldude.rmd.drooling.rules;
+package nl.eldude.rnd.drooling.rules;
 dialect  "mvel";
 
 import nl.eldude.rnd.drooling.model.Item;
